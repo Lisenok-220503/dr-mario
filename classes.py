@@ -1,6 +1,9 @@
+from random import choice
+from color_const import *
+
 class Object():
-    def __init__(self, color):
-        self.color = color
+    def __init__(self):
+        self.color = choice(pill_colors)
         self.size = width, height = 30, 30
 
     def destruction(self):
@@ -9,13 +12,13 @@ class Object():
 
 class Pill(Object):
     def __init__(self, color1, color2):
-        self.color = [color1, color2]
-        self.size = width, height = 30, 30
+        self.container = [Object(), Object()]
+        self.size = width, height = 60, 30
     def destruction(self):
         super().destruction()
 
 class Virus(Object):
-    def __init__(self, color):
+    def __init__(self):
         super().__init__()
 
     def destruction(self):
