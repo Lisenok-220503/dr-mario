@@ -18,5 +18,8 @@ class Virus(Object):
     def __init__(self, color):
         super().__init__()
 
-
-
+    def destruction(self):
+        global virus_amount
+        virus_amount -= 1
+        global points
+        points += 200
