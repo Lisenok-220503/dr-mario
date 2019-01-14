@@ -1,3 +1,4 @@
+import pygame
 from random import choice
 from color_const import *
 
@@ -17,12 +18,20 @@ class Pill(Object):
     def destruction(self):
         super().destruction()
 
+    def draw(self, surface, position):
+        pygame.
+
 class Virus(Object):
     def __init__(self):
         super().__init__()
+
 
     def destruction(self):
         global virus_amount
         virus_amount -= 1
         global points
         points += 200
+
+    def draw(self, surface, position):
+        pygame.circle(surface, self.color, position, 15, 30)
+        

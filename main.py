@@ -1,5 +1,5 @@
 import pygame
-from board import board
+from board import Board
 
 size = width, height = 600, 450
 screen1 = pygame.display.set_mode(size)
@@ -13,5 +13,5 @@ while running:
             running = False
 
         if event.type == pygame.K_RETURN:
-            board()
+            Board()
             
