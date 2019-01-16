@@ -1,4 +1,7 @@
+import pygame
+
 class Board:
+    
     def __init__(self):
         self.width = 250
         self.height = 450
@@ -6,10 +9,16 @@ class Board:
         self.left = 10
         self.top = 10
         self.cell_size = 30
+        
     
     def set_view(self, left, top, cell_size):
         self.left = left
         self.top = top
         self.cell_size = cell_size
+    
+    def start_draw(self):
+        for i in range(6):
+            self.virus = Virus()
+            
         
     
