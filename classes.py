@@ -19,7 +19,7 @@ class Pill(Object):
         super().destruction()
 
     def draw(self, surface, position):
-        pygame.
+        pygame.draw.rect(surface, self.container[0].color, )
 
 class Virus(Object):
     def __init__(self):
@@ -33,5 +33,5 @@ class Virus(Object):
         points += 200
 
     def draw(self, surface, position):
-        pygame.circle(surface, self.color, position, 15, 30)
+        pygame.draw.circle(surface, self.color, position, 15, 30)
         
