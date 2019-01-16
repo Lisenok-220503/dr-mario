@@ -3,7 +3,8 @@ from random import choice
 from color_const import *
 
 class Object():
-    def __init__(self):
+    def __init__(self, x, y):
+        self.pos = (x, y)
         self.color = choice(pill_colors)
         self.size = width, height = 30, 30
 
@@ -12,7 +13,8 @@ class Object():
         points += 50
 
 class Pill(Object):
-    def __init__(self, color1, color2):
+    def __init__(self, x, y):
+        self.pos = (x, y)
         self.container = [Object(), Object()]
         self.size = width, height = 60, 30
     def destruction(self):
@@ -22,8 +24,10 @@ class Pill(Object):
         pygame.draw.rect(surface, self.container[0].color, )
 
 class Virus(Object):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, x, y):
+        self.pos = (x, y)
+        self.color = choice(pill_colors)
+        self.size = width, height = 30, 30        
 
 
     def destruction(self):
