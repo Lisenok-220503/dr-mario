@@ -1,7 +1,8 @@
 import pygame
 from random import randrange
-from classes import Virus
+from classes import Object, Virus, Pill
 
+spawn_pos = (110, 0)
 class Board:
     
     def __init__(self):
@@ -23,10 +24,15 @@ class Board:
         self.top = top
         self.cell_size = cell_size
     
-    def start_spawn(self):
+    def start_spawn_virus(self):
         for i in range(6):
             self.virus = Virus()
             self.virus.draw(self.display, (randrange(0, 240), randrange(0, 225)))
+    
+    def spawn_pill(self):
+        pill = Pill()
+        pill.draw(self.display, ((110, 0), (30, 30)), self.size, self.size)
+        
     
         
     

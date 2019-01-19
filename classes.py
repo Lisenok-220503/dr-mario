@@ -20,8 +20,9 @@ class Pill(Object):
     def destruction(self):
         super().destruction()
 
-    def draw(self, surface, position):
-        pygame.draw.rect(surface, self.color, position) # position - (start_x, start_y, width, height)
+    def draw(self, surface, position_1, position_2):
+        pygame.draw.rect(surface, self.container[0].color, position_1) # position - (start_x, start_y, width, height)
+        pygame.draw.rect(surface, self.container[1].color, position_2)
 
 class Virus(Object):
     def __init__(self, x, y):
