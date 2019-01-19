@@ -28,4 +28,8 @@ while running:
 
         if event.type == pygame.K_RETURN:
             Board()
+    
+    
+    screen.fill([255, 255, 255])
+    screen.blit(BackGround.image, BackGround.rect)    
             
