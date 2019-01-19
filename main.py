@@ -30,6 +30,6 @@ while running:
             Board()
     
     
-    screen.fill([255, 255, 255])
-    screen.blit(BackGround.image, BackGround.rect)    
+    screen.fill([255, 255, 255]) 
+    screen.blit(BackGround.image, BackGround.rect) # позволяет отображать изображение под всеми спрайтами и клетчатым полем   
             
