@@ -14,11 +14,11 @@ class Object():
         points += 50
 
 class Pill(Object):
-    def __init__(self, x, y):
+    def __init__(self, x1, y1, x2, y2):
 
         self.pos = (x, y)
 
-        self.container = [Object(), Object()]
+        self.container = [Object(x1, y1), Object(x2, y2)]
         self.size = width, height = 60, 30
     def destruction(self):
         super().destruction()
