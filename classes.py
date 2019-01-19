@@ -27,6 +27,9 @@ class Pill(Object):
         pygame.draw.rect(surface, self.container[0].color, position_1) # position - (start_x, start_y, width, height)
         pygame.draw.rect(surface, self.container[1].color, position_2)
 
+    def rotate(self):
+        pass
+
 
 class Virus(Object):
     def __init__(self, x, y):
