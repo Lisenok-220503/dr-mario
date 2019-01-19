@@ -1,8 +1,13 @@
 import pygame
 from board import Board
 
+pygame.init()
+
 total_width = 900
 total_height = 650
+
+image = load_image("image.jpg")
+
 
 pygame.mixer.music.load("music.mp3") 
 pygame.mixer.music.play(-1,0.0)
