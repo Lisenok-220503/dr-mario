@@ -1,12 +1,11 @@
 import pygame
 from board import Board
 
-total_width = 900
-total_height = 650
+window_size = total_width, total_height = 900, 650
 
 def init_window():
     pygame.init()
-    screen1 = pygame.display.set_mode((total_width, total_heigth))
+    screen1 = pygame.display.set_mode(window_size)
     pygame.display.set_caption('Dr Mario')
 
 clock = pygame.time.Clock()
