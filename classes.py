@@ -2,6 +2,13 @@ import pygame
 from random import choice
 from color_const import * 
 
+class Background(pygame.sprite.Sprite):
+    def __init__(self, image_file, location):
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+
 class Object():
     def __init__(self, x, y):
         self.pos = (x, y)
