@@ -27,7 +27,7 @@ class Board:
     def start_spawn_virus(self):
         for i in range(6):
             self.virus = Virus()
-            self.virus.draw(self.display, (randrange(0, 240), randrange(0, 225)))
+            self.virus.draw(self.display, (randrange(0, 240), randrange(225, 450)))
     
     def spawn_pill(self):
         pill = Pill()
