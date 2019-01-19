@@ -1,6 +1,6 @@
 import pygame
 from random import choice
-from color_const import *
+from color_const import * 
 
 class Object():
     def __init__(self, x, y):
@@ -21,12 +21,11 @@ class Pill(Object):
         super().destruction()
 
     def draw(self, surface, position):
-        pygame.draw.rect(surface, self.container[0].color, self.size)
+        pygame.draw.rect(surface, self.color, position) # position - (start_x, start_y, width, height)
 
 class Virus(Object):
     def __init__(self, x, y):
         self.pos = (x, y)
-        self.color = choice(pill_colors)
         self.size = width, height = 30, 30        
 
 
