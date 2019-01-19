@@ -1,5 +1,5 @@
 import pygame
-import random
+from random import randrange
 from classes import Virus
 
 class Board:
@@ -26,6 +26,7 @@ class Board:
     def start_spawn(self):
         for i in range(6):
             self.virus = Virus()
+            self.virus.draw(self.display, (randrange(0, 240), randrange(0, 225)))
     
         
     
