@@ -45,6 +45,7 @@ class Pill(Object):
 
     def move_left(self):
         self.container[0].move_pos(30, 0)
+        self.container[1].move_pos(30, 0)
 
 
 
@@ -52,7 +53,7 @@ class Virus(Object):
     def __init__(self, x, y):
         super().__init__()
 
-        self.pos = (x, y)
+        self.pos = [x, y]
         self.size = width, height = 30, 30
 
     def destruction(self):
