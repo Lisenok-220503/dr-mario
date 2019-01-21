@@ -1,6 +1,7 @@
 # *-* encoding=utf8 *-*
 # https://www.pygame.org/docs/ref/key.html
 import pygame
+import os
 from board import Board
 from classes import Background
 pygame.init()
