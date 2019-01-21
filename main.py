@@ -1,5 +1,6 @@
 # *-* encoding=utf8 *-*
 import pygame
+import os
 from board import Board
 from classes import Background
 pygame.init()
