@@ -1,4 +1,5 @@
 # *-* encoding=utf8 *-*
+# https://www.pygame.org/docs/ref/key.html
 import pygame
 from board import Board
 from classes import Background
@@ -21,14 +22,19 @@ running = True
 pygame.init()
 screen1 = pygame.display.set_mode((total_width, total_height))
 pygame.display.set_caption('Dr Mario')
-
+game = False
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
         if event.type == pygame.K_RETURN:
-            Board()
+            board = Board()
+            game = True
+        if event.type == pygame.SPACE and game:
+            board.rotate()
+
+        if event.type == pygame.
     
     
     screen1.fill([255, 255, 255])
