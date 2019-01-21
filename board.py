@@ -29,6 +29,12 @@ class Board:
     def spawn_pill(self):
         pill = Pill()
         pill.draw(self.display, ((110, 0), (30, 30)), self.cell_size, self.cell_size)
+        
+    def move_pill(self):
+        pass
+    
+    def rotate_pill(self):
+        pass
 
 
 pygame.quit()
