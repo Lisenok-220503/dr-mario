@@ -1,9 +1,10 @@
 # *-* encoding=utf8 *-*
 # https://www.pygame.org/docs/ref/key.html
 import pygame
-import os
 from board import Board
 from classes import Background
+
+
 pygame.init()
 
 total_width = 900
@@ -32,12 +33,18 @@ while running:
         if event.type == pygame.K_RETURN:
             board = Board()
             game = True
-        if event.type == pygame.SPACE and game:
+        if event.type == pygame.K_SPACE and game:
             board.rotate()
 
-        if event.type == pygame.
-    
-    
+        if event.type == pygame.K_RIGHT:
+            board.move_right()
+
+        if event.type == pygame.K_LEFT:
+            board.move_left()
+
+        if event.type == pygame.K_DOWN:
+            board.move_down()
+
     screen1.fill([255, 255, 255])
     screen1.blit(BackGround.image, BackGround.rect)
 

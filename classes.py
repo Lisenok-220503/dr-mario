@@ -11,7 +11,7 @@ class Background(pygame.sprite.Sprite):
 
 class Object():
     def __init__(self, x, y):
-        self.pos = (x, y)
+        self.pos = [x, y]
 
         self.color = choice(pill_colors)
         self.size = width, height = 30, 30
@@ -20,13 +20,19 @@ class Object():
         global points
         points += 50
 
+    def change_pos(self, x_new, y_new):
+        self.pos = [x_new, y_new]
+
+    def move_pos(self, k1, k2):
+        self.pos[0] += k1
+        self.pos[1] += k2
+
+
 class Pill(Object):
     def __init__(self, x1, y1, x2, y2):
-
-        self.pos = (x, y)
-
         self.container = [Object(x1, y1), Object(x2, y2)]
         self.size = width, height = 60, 30
+
     def destruction(self):
         super().destruction()
 
@@ -36,6 +42,10 @@ class Pill(Object):
 
     def rotate(self):
         pass
+
+    def move_left(self):
+        self.container[0].move_pos(30, 0)
+
 
 
 class Virus(Object):
