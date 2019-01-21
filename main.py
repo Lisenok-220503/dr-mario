@@ -36,13 +36,13 @@ while running:
         if event.type == pygame.K_SPACE and game:
             board.rotate()
 
-        if event.type == pygame.K_RIGHT:
+        if event.type == pygame.K_RIGHT and game:
             board.move_right()
 
-        if event.type == pygame.K_LEFT:
+        if event.type == pygame.K_LEFT and game:
             board.move_left()
 
-        if event.type == pygame.K_DOWN:
+        if event.type == pygame.K_DOWN and game:
             board.move_down()
 
     screen1.fill([255, 255, 255])
