@@ -3,7 +3,7 @@
 import pygame
 from board import Board
 from classes import Background
-import os
+
 
 pygame.init()
 
@@ -15,6 +15,12 @@ pygame.mixer.music.play(-1, 0.0)
 
 clock = pygame.time.Clock()
 
+# Каждые полторы секунды пилюля автоматически опускается.
+# Для этого создаю свой ивент.
+# В главной переменной я хз, что забивать. Пусть будет как в примере. 	¯\_(ツ)_/¯
+
+time_event = 30
+pygame.time.set_timer(time_event, 1500)
 
 running = True
 
@@ -43,8 +49,9 @@ while running:
         if event.type == pygame.K_LEFT and game:
             board.move_left()
 
-        if event.type == pygame.K_DOWN and game:
+        if (event.type == pygame.K_DOWN or event.type == time_event) and game:
             board.move_down()
+
     screen1.blit(BackGround.image, BackGround.rect)
     pygame.display.flip()
 
