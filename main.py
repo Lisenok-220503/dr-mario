@@ -4,11 +4,6 @@ import pygame
 from board import Board
 from classes import Background
 import os
- 
- 
-def load_image(name, colorkey=None):
-    fullname = os.path.join('data', name)
-    image = pygame.image.load(fullname)
 
 pygame.init()
 
