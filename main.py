@@ -10,22 +10,23 @@ pygame.init()
 total_width = 900
 total_height = 650
 
-music = pygame.mixer.music.load("~ dr mario\\data\\fever.mp3")
+music = pygame.mixer.music.load("fever.mp3")
 pygame.mixer.music.play(-1, 0.0)
 
 clock = pygame.time.Clock()
 
-image = pygame.image.load("~ dr mario\\data\\background.jpg")
-
 
 running = True
 
+BackGround = Background('background.jpg', [0,0])
 
 pygame.init()
 screen1 = pygame.display.set_mode((total_width, total_height))
 pygame.display.set_caption('Dr Mario')
 game = False
 while running:
+    screen1.fill([255, 255, 255])
+    screen1.blit(BackGround.image, BackGround.rect)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -44,8 +45,8 @@ while running:
 
         if event.type == pygame.K_DOWN and game:
             board.move_down()
+    screen1.blit(BackGround.image, BackGround.rect)
+    pygame.display.flip()
 
-    screen1.fill([255, 255, 255])
-    screen1.blit(image, (0, 0))
 
 pygame.quit()
