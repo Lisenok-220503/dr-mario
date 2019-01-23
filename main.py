@@ -10,12 +10,12 @@ pygame.init()
 total_width = 900
 total_height = 650
 
-music = pygame.mixer.music.load("C:\\Users\\user\\Documents\\dr mario\\data\\fever.mp3")
+music = pygame.mixer.music.load("~ dr mario\\data\\fever.mp3")
 pygame.mixer.music.play(-1, 0.0)
 
 clock = pygame.time.Clock()
 
-image = pygame.image.load("C:\\Users\\user\\Documents\\dr mario\\data\\background.jpg")
+image = pygame.image.load("~ dr mario\\data\\background.jpg")
 
 
 running = True
