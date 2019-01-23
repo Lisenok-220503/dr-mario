@@ -4,11 +4,6 @@ import pygame
 from board import Board
 from classes import Background
 import os
- 
- 
-def load_image(name, colorkey=None):
-    fullname = os.path.join('data', name)
-    image = pygame.image.load(fullname)
 
 pygame.init()
 
@@ -23,13 +18,13 @@ clock = pygame.time.Clock()
 image = pygame.image.load("C:\\Users\\user\\Documents\\dr mario\\data\\background.jpg")
 
 
-running=True
+running = True
 
 
 pygame.init()
 screen1=pygame.display.set_mode((total_width, total_height))
 pygame.display.set_caption('Dr Mario')
-game=False
+game = False
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
