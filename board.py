@@ -14,7 +14,7 @@ class Board: # я решила переделать поле на клетки, ибо я просто не понимаю по др
         self.top = 10
         self.cell_size = 30
  
-    # настраеваем внешний вид
+    # метод нужен, если понадобится что-то изменить в размерах поля.
     def set_view(self, left, top, cell_size):
         self.left = left
         self.top = top

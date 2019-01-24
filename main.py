@@ -30,7 +30,7 @@ pygame.init()
 screen1 = pygame.display.set_mode((total_width, total_height))
 pygame.display.set_caption('Dr Mario')
 
-#board = Board(8, 15)
+board = Board(8, 15)
 
 game = False
 while running:
@@ -54,7 +54,7 @@ while running:
 
         if (event.type == pygame.K_DOWN or event.type == time_event) and game:
             board.move_down()
-
+    board.render()
     screen1.blit(BackGround.image, BackGround.rect)
     pygame.display.flip()
 
