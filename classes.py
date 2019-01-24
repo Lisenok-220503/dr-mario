@@ -74,7 +74,6 @@ class Pill(Object):
         self.container[0].move_pos(0, 30)
         self.container[1].move_pos(0, 30)
 
-
 class Virus(Object):
     def __init__(self, x, y):
         super().__init__(x, y)

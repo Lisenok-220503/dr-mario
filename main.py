@@ -36,6 +36,7 @@ game = False
 while running:
     screen1.fill([255, 255, 255])
     screen1.blit(BackGround.image, BackGround.rect)
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False

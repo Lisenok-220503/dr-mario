@@ -28,7 +28,6 @@ class Board: # я решила переделать поле на клетки, ибо я просто не понимаю по др
                     x * self.cell_size + self.left , y * self.cell_size
                     + self.top, self.cell_size, self.cell_size), 1)
 
-    
     def start_spawn_virus(self):
         self.virus_list = []
         for i in range(6):
@@ -44,6 +43,5 @@ class Board: # я решила переделать поле на клетки, ибо я просто не понимаю по др
     
     def rotate_pill(self):
         self.rotate()
-
 
 pygame.quit()
