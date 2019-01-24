@@ -29,6 +29,9 @@ BackGround = Background('background.jpg', [0,0])
 pygame.init()
 screen1 = pygame.display.set_mode((total_width, total_height))
 pygame.display.set_caption('Dr Mario')
+
+#board = Board(8, 15)
+
 game = False
 while running:
     screen1.fill([255, 255, 255])
