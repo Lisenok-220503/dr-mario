@@ -36,7 +36,6 @@ game = False
 while running:
     screen1.fill([255, 255, 255])
     screen1.blit(BackGround.image, BackGround.rect)
-    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -55,6 +54,7 @@ while running:
 
         if (event.type == pygame.K_DOWN or event.type == time_event) and game:
             board.move_down()
+    board.check()
     #board.render()
     screen1.blit(BackGround.image, BackGround.rect)
     pygame.display.flip()

@@ -30,23 +30,26 @@ class Object():
     def get_pos(self):
         return self.pos[0], self.pos[1]
 
+
 class Pill(Object):
-    def __init__(self, x1, y1, x2, y2):
+    def __init__(self, surface, x1, y1, x2, y2):
         self.container = [Object(x1, y1), Object(x2, y2)]
         self.size = width, height = 60, 30
         self.rotate_phase = 1
+        self.surface = surface
 
     def destruction(self):
         super().destruction()
 
-    def draw(self, surface, position_1, position_2):
+    def draw(self):
         # position - (start_x, start_y, width, height)
-        pygame.draw.rect(surface, self.container[0].color, position_1)
-        pygame.draw.rect(surface, self.container[1].color, position_2)
+        # че?
+        pygame.draw.rect(self.surface, self.container[0].color, self.container[0].get_pos())
+        pygame.draw.rect(self.surface, self.container[1].color, self.container[1].get_pos())
 
     def rotate(self):
         self.rotate_phase += 1
-        if self.rotate_phase > 4: self.rotate_phase -=4
+        if self.rotate_phase > 4: self.rotate_phase -= 4
 
         if self.rotate_phase == 1:
             self.container[0].move_pos(0, 30)
@@ -73,6 +76,9 @@ class Pill(Object):
     def move_down(self):
         self.container[0].move_pos(0, 30)
         self.container[1].move_pos(0, 30)
+
+    def get_pos(self):
+        return [self.container[0].get_pos()], [self.container[1].get_pos()]
 
 class Virus(Object):
     def __init__(self, x, y):
