@@ -57,8 +57,10 @@ class Board():
                 else:
                     temp_1 = self.board[i].get_pos()
                     temp_2 = self.board[j].get_pos()
-                    if temp_1[0][0] == temp_2[0][0] or temp_1[1][0] == temp_2[0][0] or\
-                            temp_1[0][0] == temp_2[1][0] or temp_1[1][0] == temp_2[1][0]:
+                    if temp_1[0][0] == temp_2[0][0] or \
+                       temp_1[1][0] == temp_2[0][0] or \
+                       temp_1[0][0] == temp_2[1][0] or \
+                       temp_1[1][0] == temp_2[1][0]:
                         return True
 
     def check_destruction(self):
